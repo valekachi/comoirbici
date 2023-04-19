@@ -1,21 +1,26 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+
+import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
+import { styles } from './styles';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hola, coder!
-         Bienvenidx a la app en la que podes ver las mejores rutas para llegar en bici a donde quieras</Text>
-      <StatusBar style="auto" />
+      <View style={styles.inputContainer}>
+        <TextInput placeholder='Colocar evento' style={styles.input} />
+        <Button title='+' color= "#569DAA" />
+      </View>
+      <View style={styles.listContainer}>
+        <View style={styles.itemContainer}>
+          <Text style={styles.item}>Camino menos transitado</Text>
+        </View>
+        <View style={styles.itemContainer}>
+        <Text style={styles.item}>Ir por ciclovía</Text>
+        </View>
+        <View style={styles.itemContainer}>
+        <Text style={styles.item}>Camino mas corto</Text>
+        </View>
+      </View>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
