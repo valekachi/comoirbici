@@ -29,7 +29,7 @@ export const styles = StyleSheet.create({
         height: 80,
         justifyContent: 'center',
         backgroundColor: '#87CBB9',
-        borderRadius: 5,
+        borderRadius: 10,
         marginVertical: 5,
     },
     item: {
@@ -37,5 +37,6 @@ export const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 16,
         fontWeight: 'bold',
+        textAlign: 'center',
     },
   });
